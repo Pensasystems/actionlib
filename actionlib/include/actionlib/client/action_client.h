@@ -283,7 +283,7 @@ private:
 
   void statusCb(const ros::MessageEvent<actionlib_msgs::GoalStatusArray const> & status_array_event)
   {
-    ROS_DEBUG_NAMED("actionlib", "Getting status over the wire.");
+    // ROS_DEBUG_NAMED("actionlib", "Getting status over the wire.");
     if (connection_monitor_) {
       connection_monitor_->processStatus(
         status_array_event.getConstMessage(), status_array_event.getPublisherName());
